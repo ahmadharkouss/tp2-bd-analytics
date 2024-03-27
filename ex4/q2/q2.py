@@ -65,7 +65,7 @@ print("#########################################################################
 print("+++ better visualization:")
 print("########################################################################################################################################")
 
-#For each of the top 4 destination zones, find the starting zones of the corresponding trips
+#For each of the top 4 destination zones, find the top 5 starting zones of the corresponding trips
 counter=1;
 for destination in top_destinations:
     destination_zone = destination["DOZone"]
