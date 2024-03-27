@@ -8,6 +8,20 @@ Top 4 destination zones based on trip count:
 |Upper West Side S...|     75050|
 +--------------------+----------+
 
+Top 5 Starting zones for top 4 destination zones:
++--------------------+-----------------------------+
+|              PUZone|trip_count_from_starting_zone|
++--------------------+-----------------------------+
+|Upper East Side N...|                        42687|
+|Upper East Side S...|                        40729|
+|     Lenox Hill West|                        20108|
+|      Yorkville West|                        18563|
+| Lincoln Square East|                        18371|
++--------------------+-----------------------------+
+
+########################################################################################################################################
++++ better visualization:
+########################################################################################################################################
 Top5 Starting zones for top 1 destination zone:  Upper East Side North
 +--------------------+-----------------------------+
 |              PUZone|trip_count_from_starting_zone|
@@ -52,7 +66,3 @@ Top5 Starting zones for top 4 destination zone:  Upper West Side South
 |Upper East Side S...|                         3974|
 +--------------------+-----------------------------+
 
-Total trips from top 5 starting zones to destination zone Upper East Side North: 52029
-Total trips from top 5 starting zones to destination zone Upper East Side South: 44513
-Total trips from top 5 starting zones to destination zone Lenox Hill West: 28411
-Total trips from top 5 starting zones to destination zone Upper West Side South: 28191

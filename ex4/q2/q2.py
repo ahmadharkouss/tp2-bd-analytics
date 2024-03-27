@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import count, desc
+from pyspark.sql.functions import count, desc ,col
 
 spark = SparkSession.builder \
     .master("local[*]") \
@@ -41,18 +41,36 @@ print("Top 4 destination zones based on trip count:")
 top_destinations.show()
 
 
+# Collect top destinations
+top_destinations = top_destinations.collect()
+
+# Filter data for top destinations and group by starting zones
+starting_zones1 = data_final.filter(
+    (col("DOZone") == top_destinations[0]["DOZone"]) |
+    (col("DOZone") == top_destinations[1]["DOZone"]) |
+    (col("DOZone") == top_destinations[2]["DOZone"]) |
+    (col("DOZone") == top_destinations[3]["DOZone"])
+).groupBy("PUZone").agg(count("*").alias("trip_count_from_starting_zone"))
+
+# Get top 5 starting zones  to the top 4 destination zones
+top_starting_zones = starting_zones1.orderBy(desc("trip_count_from_starting_zone")).limit(5)
+
+
+print("Top 5 Starting zones for top 4 destination zones:")
+top_starting_zones.show()
+
+
+
+print("########################################################################################################################################")
+print("+++ better visualization:")
+print("########################################################################################################################################")
+
 #For each of the top 4 destination zones, find the starting zones of the corresponding trips
 counter=1;
-final_result = []
-for destination in top_destinations.collect():
+for destination in top_destinations:
     destination_zone = destination["DOZone"]
-    starting_zones = data_final.filter(data_final["DOZone"] == destination_zone).groupBy("PUZone").agg(count("*").alias("trip_count_from_starting_zone"))
-    top_starting_zones = starting_zones.orderBy(desc("trip_count_from_starting_zone")).limit(5)
+    starting_zones2 = data_final.filter(data_final["DOZone"] == destination_zone).groupBy("PUZone").agg(count("*").alias("trip_count_from_starting_zone"))
+    top_starting_zones = starting_zones2.orderBy(desc("trip_count_from_starting_zone")).limit(5)
     print(f"Top5 Starting zones for top {counter} destination zone: ", destination_zone)
     top_starting_zones.show()
-    total_trips = top_starting_zones.selectExpr("sum(trip_count_from_starting_zone) as total_trips").collect()[0]["total_trips"]
-    final_result.append((destination_zone, total_trips))
     counter+=1
-
-for result in final_result:
-    print(f"Total trips from top 5 starting zones to destination zone {result[0]}: {result[1]}")
