@@ -1,6 +1,6 @@
-Top 4 destinations:
+Top 4 destination zones based on trip count:
 +--------------------+----------+
-|                Zone|trip_count|
+|              DOZone|trip_count|
 +--------------------+----------+
 |Upper East Side N...|    123470|
 |Upper East Side S...|    106355|
@@ -8,14 +8,51 @@ Top 4 destinations:
 |Upper West Side S...|     75050|
 +--------------------+----------+
 
-Top 5 starting zones:
-+--------------------+----------+
-|                Zone|trip_count|
-+--------------------+----------+
-|Upper East Side S...|    121630|
-|Upper East Side N...|    120814|
-|         JFK Airport|    103485|
-|      Midtown Center|     88237|
-|Penn Station/Madi...|     80580|
-+--------------------+----------+
+Top5 Starting zones for top 1 destination zone:  Upper East Side North
++--------------------+-----------------------------+
+|              PUZone|trip_count_from_starting_zone|
++--------------------+-----------------------------+
+|Upper East Side S...|                        18749|
+|Upper East Side N...|                        13871|
+|     Lenox Hill West|                         7712|
+|      Yorkville West|                         5877|
+|      Midtown Center|                         5820|
++--------------------+-----------------------------+
 
+Top5 Starting zones for top 2 destination zone:  Upper East Side South
++--------------------+-----------------------------+
+|              PUZone|trip_count_from_starting_zone|
++--------------------+-----------------------------+
+|Upper East Side N...|                        16200|
+|Upper East Side S...|                        12149|
+|      Midtown Center|                         6175|
+|     Lenox Hill West|                         5379|
+| Lincoln Square East|                         4610|
++--------------------+-----------------------------+
+
+Top5 Starting zones for top 3 destination zone:  Lenox Hill West
++--------------------+-----------------------------+
+|              PUZone|trip_count_from_starting_zone|
++--------------------+-----------------------------+
+|      Yorkville West|                         6897|
+|Upper East Side N...|                         6594|
+|Upper East Side S...|                         5857|
+|     Lenox Hill West|                         5274|
+|        Midtown East|                         3789|
++--------------------+-----------------------------+
+
+Top5 Starting zones for top 4 destination zone:  Upper West Side South
++--------------------+-----------------------------+
+|              PUZone|trip_count_from_starting_zone|
++--------------------+-----------------------------+
+| Lincoln Square East|                         6955|
+|Upper West Side N...|                         6283|
+|Upper East Side N...|                         6022|
+|Upper West Side S...|                         4957|
+|Upper East Side S...|                         3974|
++--------------------+-----------------------------+
+
+Total trips from top 5 starting zones to destination zone Upper East Side North: 52029
+Total trips from top 5 starting zones to destination zone Upper East Side South: 44513
+Total trips from top 5 starting zones to destination zone Lenox Hill West: 28411
+Total trips from top 5 starting zones to destination zone Upper West Side South: 28191

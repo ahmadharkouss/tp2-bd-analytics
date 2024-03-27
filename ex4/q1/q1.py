@@ -14,18 +14,24 @@ data1 = spark.read.option("header", "true").option("inferschema", "true").parque
 # Read data2 from a CSV file
 data2 = spark.read.option("header", "true").option("inferschema", "true").csv("file:///home/ahmad/bd-analytics/data/taxi_zone_lookup.csv")
 
-
-
 # Join data1 with data2 for PULocationID
-data_pu = data1.join(data2, data1["PULocationID"] == data2["LocationID"])
+data_pu = data1.join(data2.withColumnRenamed("LocationID", "PULocationID")
+                    .withColumnRenamed("Borough", "PUBorough")
+                    .withColumnRenamed("Zone", "PUZone")
+                    .withColumnRenamed("service_zone", "PUservice_zone"),
+                    "PULocationID")
+
 
 # Join data1 with data2 for DOLocationID
-data_do = data1.join(data2, data1["DOLocationID"] == data2["LocationID"])
+data_final = data_pu.join(data2.withColumnRenamed("LocationID", "DOLocationID")
+                    .withColumnRenamed("Borough", "DOBorough")
+                    .withColumnRenamed("Zone", "DOZone")
+                    .withColumnRenamed("service_zone", "DOservice_zone"),
+                    "DOLocationID")
 
-# Show the schema of the joined data for pick-up
-data_pu.printSchema()
-data_pu.show()
+# Show the schema of the final joined data
+data_final.printSchema()
 
-# Show the schema of the joined data for drop-off
-data_do.printSchema()
-data_do.show()
+# Show the final joined data
+data_final.show()
+
