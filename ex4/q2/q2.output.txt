@@ -1,0 +1,21 @@
+Top 4 destinations:
++--------------------+----------+
+|                Zone|trip_count|
++--------------------+----------+
+|Upper East Side N...|    123470|
+|Upper East Side S...|    106355|
+|     Lenox Hill West|     78341|
+|Upper West Side S...|     75050|
++--------------------+----------+
+
+Top 5 starting zones:
++--------------------+----------+
+|                Zone|trip_count|
++--------------------+----------+
+|Upper East Side S...|    121630|
+|Upper East Side N...|    120814|
+|         JFK Airport|    103485|
+|      Midtown Center|     88237|
+|Penn Station/Madi...|     80580|
++--------------------+----------+
+
