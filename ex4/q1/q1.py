@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 
 spark = SparkSession.builder \
     .master("local[*]") \
-    .appName("taxi-ex1") \
+    .appName("ex4-q1") \
     .config("spark.driver.memory", "4g") \
     .getOrCreate()
 
