@@ -1,4 +1,4 @@
-Nombre de films pour chaque appréciation (rating 0.5, 1, 2, 3, 4 et 5) :
+Nombre de films pour chaque appréciation:
 +------+-------+
 |rating|  count|
 +------+-------+

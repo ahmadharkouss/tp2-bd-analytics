@@ -16,5 +16,5 @@ ratings_df = spark.read.csv("file:///home/ahmad/bd-analytics/data/ratings.dat", 
 
 # Q6 - Nombre de films pour chaque appréciation (rating 1, 2, 3, 4 et 5)
 ratings_count = ratings_df.groupBy("rating").count().orderBy("rating")
-print("Nombre de films pour chaque appréciation (rating 0.5, 1, 2, 3, 4 et 5) :")
+print("Nombre de films pour chaque appréciation:")
 ratings_count.show()
