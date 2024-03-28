@@ -1,0 +1,16 @@
+Les 10 films les plus regardés :
++-----+--------------------+
+|count|               title|
++-----+--------------------+
+|34864| Pulp Fiction (1994)|
+|34457| Forrest Gump (1994)|
+|33668|Silence of the La...|
+|32631|Jurassic Park (1993)|
+|31126|Shawshank Redempt...|
+|29154|   Braveheart (1995)|
+|28951|Fugitive, The (1993)|
+|28948|Terminator 2: Jud...|
+|28566|Star Wars: Episod...|
+|27035|    Apollo 13 (1995)|
++-----+--------------------+
+

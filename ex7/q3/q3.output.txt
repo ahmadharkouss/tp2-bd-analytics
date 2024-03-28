@@ -1,0 +1,32 @@
+root
+ |-- movieId: integer (nullable = true)
+ |-- title: string (nullable = true)
+ |-- genres: string (nullable = true)
+ |-- release_year: string (nullable = true)
+
++-------+--------------------+--------------------+------------+
+|movieId|               title|              genres|release_year|
++-------+--------------------+--------------------+------------+
+|      1|    Toy Story (1995)|Adventure|Animati...|        1995|
+|      2|      Jumanji (1995)|Adventure|Childre...|        1995|
+|      3|Grumpier Old Men ...|      Comedy|Romance|        1995|
+|      4|Waiting to Exhale...|Comedy|Drama|Romance|        1995|
+|      5|Father of the Bri...|              Comedy|        1995|
+|      6|         Heat (1995)|Action|Crime|Thri...|        1995|
+|      7|      Sabrina (1995)|      Comedy|Romance|        1995|
+|      8| Tom and Huck (1995)|  Adventure|Children|        1995|
+|      9| Sudden Death (1995)|              Action|        1995|
+|     10|    GoldenEye (1995)|Action|Adventure|...|        1995|
+|     11|American Presiden...|Comedy|Drama|Romance|        1995|
+|     12|Dracula: Dead and...|       Comedy|Horror|        1995|
+|     13|        Balto (1995)|  Animation|Children|        1995|
+|     14|        Nixon (1995)|               Drama|        1995|
+|     15|Cutthroat Island ...|Action|Adventure|...|        1995|
+|     16|       Casino (1995)|         Crime|Drama|        1995|
+|     17|Sense and Sensibi...|Comedy|Drama|Romance|        1995|
+|     18|   Four Rooms (1995)|Comedy|Drama|Thri...|        1995|
+|     19|Ace Ventura: When...|              Comedy|        1995|
+|     20|  Money Train (1995)|Action|Comedy|Cri...|        1995|
++-------+--------------------+--------------------+------------+
+only showing top 20 rows
+

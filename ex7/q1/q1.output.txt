@@ -1,0 +1,63 @@
+root
+ |-- movieId: integer (nullable = true)
+ |-- title: string (nullable = true)
+ |-- genres: string (nullable = true)
+
++-------+--------------------+--------------------+
+|movieId|               title|              genres|
++-------+--------------------+--------------------+
+|      1|    Toy Story (1995)|Adventure|Animati...|
+|      2|      Jumanji (1995)|Adventure|Childre...|
+|      3|Grumpier Old Men ...|      Comedy|Romance|
+|      4|Waiting to Exhale...|Comedy|Drama|Romance|
+|      5|Father of the Bri...|              Comedy|
+|      6|         Heat (1995)|Action|Crime|Thri...|
+|      7|      Sabrina (1995)|      Comedy|Romance|
+|      8| Tom and Huck (1995)|  Adventure|Children|
+|      9| Sudden Death (1995)|              Action|
+|     10|    GoldenEye (1995)|Action|Adventure|...|
+|     11|American Presiden...|Comedy|Drama|Romance|
+|     12|Dracula: Dead and...|       Comedy|Horror|
+|     13|        Balto (1995)|  Animation|Children|
+|     14|        Nixon (1995)|               Drama|
+|     15|Cutthroat Island ...|Action|Adventure|...|
+|     16|       Casino (1995)|         Crime|Drama|
+|     17|Sense and Sensibi...|Comedy|Drama|Romance|
+|     18|   Four Rooms (1995)|Comedy|Drama|Thri...|
+|     19|Ace Ventura: When...|              Comedy|
+|     20|  Money Train (1995)|Action|Comedy|Cri...|
++-------+--------------------+--------------------+
+only showing top 20 rows
+
+root
+ |-- userId: integer (nullable = true)
+ |-- movieId: integer (nullable = true)
+ |-- rating: double (nullable = true)
+ |-- timestamp: integer (nullable = true)
+
++------+-------+------+---------+
+|userId|movieId|rating|timestamp|
++------+-------+------+---------+
+|     1|    122|   5.0|838985046|
+|     1|    185|   5.0|838983525|
+|     1|    231|   5.0|838983392|
+|     1|    292|   5.0|838983421|
+|     1|    316|   5.0|838983392|
+|     1|    329|   5.0|838983392|
+|     1|    355|   5.0|838984474|
+|     1|    356|   5.0|838983653|
+|     1|    362|   5.0|838984885|
+|     1|    364|   5.0|838983707|
+|     1|    370|   5.0|838984596|
+|     1|    377|   5.0|838983834|
+|     1|    420|   5.0|838983834|
+|     1|    466|   5.0|838984679|
+|     1|    480|   5.0|838983653|
+|     1|    520|   5.0|838984679|
+|     1|    539|   5.0|838984068|
+|     1|    586|   5.0|838984068|
+|     1|    588|   5.0|838983339|
+|     1|    589|   5.0|838983778|
++------+-------+------+---------+
+only showing top 20 rows
+

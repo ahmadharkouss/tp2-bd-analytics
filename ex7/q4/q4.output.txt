@@ -1,0 +1,22 @@
+Liste de tous les genres de films disponibles :
+
+- Crime
+- Romance
+- Thriller
+- Adventure
+- Drama
+- War
+- Documentary
+- Fantasy
+- Mystery
+- Musical
+- Animation
+- Film-Noir
+- (no genres listed)
+- IMAX
+- Horror
+- Western
+- Comedy
+- Children
+- Action
+- Sci-Fi
